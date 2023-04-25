@@ -8,11 +8,12 @@ public class Grid : MonoBehaviour
     //public variables
     public SpriteRenderer spritePrefab;                     //prefab for the sprite
     public float spriteSize = 1.0f;                         //size of the sprite
-    public Vector2Int startPoint = new Vector2Int(0, 2);    //start point coordinate
-    public Vector2Int endPoint = new Vector2Int(9, 7);      //end point coordinate
-    public int[,] map = new int[20, 20];                    //size of the map
+    public Vector2Int startPoint = new Vector2Int(0, 0);    //start point coordinate
+    public Vector2Int endPoint = new Vector2Int(5, 5);      //end point coordinate
+    public int[,] map = new int[10, 10];                    //size of the map
     public int[,] obstacles = new int[,]                    //obstacles' coordinates
-        { {4, 4}, {5, 4}, {6, 4}, {7, 4}, {8, 4}, {0, 6}, {1, 6}, {2, 6}, {9, 6}, {8, 6}, {7, 6}, {10, 6}, {11, 6}, {12, 6}};
+        { {1, 3}, {2, 3}, {3, 3}, {4, 3}, {5, 3},{6, 3}, {7, 3}, {8, 3}, {9, 3},
+        {0, 5}, {1, 5}, {2, 5}, {3, 5}, {4, 5}, {5, 5},{6, 5}, {7, 5}, {8, 5} };
 
     //method called when the object is enabled
     private void OnEnable()

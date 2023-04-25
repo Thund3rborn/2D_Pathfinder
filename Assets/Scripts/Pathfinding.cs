@@ -30,6 +30,14 @@ public class Pathfinding : MonoBehaviour
         return xDiff + yDiff;
     }
 
+    private static int CalculateDistanceEuclidean(int x1, int y1, int x2, int y2)
+    {
+        //calculate the distance between two nodes using the Euclidean distance formula
+        int xDiff = x1 - x2;
+        int yDiff = y1 - y2;
+        return Mathf.RoundToInt(Mathf.Sqrt((xDiff * xDiff) + (yDiff * yDiff)));
+    }
+
     public static List<Node> FindPath(int[,] map, int startX, int startY, int endX, int endY)
     {
         int width = map.GetLength(0);
